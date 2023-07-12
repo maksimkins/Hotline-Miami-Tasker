@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hotline_Miami_Tasks"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Hotline Miami" Height="450" Width="296">
 
-    </Grid>
+    <StackPanel>
+        <Label Content="login" FontSize="20" FontFamily="Agency FB" Height="40"/>
+        <TextBox Height="40" FontSize="20"/>
+        <Label Content="password" FontSize="20" FontFamily="Agency FB" Height="40"/>
+        <TextBox Height="40" FontSize="20" Margin="0 5 0 5"/>
+    </StackPanel>
+       
+
 </Window>
