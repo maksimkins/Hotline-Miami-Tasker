@@ -5,14 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hotline_Miami_Tasks"
         mc:Ignorable="d"
-        Title="Hotline Miami" Height="450" Width="296">
+        Title="Hotline Miami" Height="450" Width="300">
+    <DockPanel Background="#FFEAB4E0">
+        
+        <StackPanel DockPanel.Dock="Top">
+            <Label Content="login                                    (digits and letters)" FontSize="20" FontFamily="Agency FB" Height="40"/>
+            <TextBox Height="40" Text="{Binding UserLogin}" FontSize="20" Background="#FFEAB4E0"/>
+            <Label Content="password                   (digits, letters, ($ % *) )" FontSize="20" FontFamily="Agency FB" Height="40"/>
+            <TextBox Height="40" Text="{Binding UserPassword}" FontSize="20" Background="#FFEAB4E0"/>
+            <Label Content="{Binding Message}" FontSize="20" FontFamily="Agency FB" Height="40"/>
+        </StackPanel>
 
-    <StackPanel>
-        <Label Content="login" FontSize="20" FontFamily="Agency FB" Height="40"/>
-        <TextBox Height="40" FontSize="20"/>
-        <Label Content="password" FontSize="20" FontFamily="Agency FB" Height="40"/>
-        <TextBox Height="40" FontSize="20" Margin="0 5 0 5"/>
-    </StackPanel>
-       
+        <StackPanel DockPanel.Dock ="Bottom"  Orientation="Horizontal">
+            <Button Height="30" Width="70" Margin="0 0 10 0" Content="Login"  Background="#FFDF9EFF" Click="ButtonClickLogin"/>
+            <Button Height="30" Width="70" Margin="0 0 10 0" Content="Register"  Background="#FFDF9EFF" Click="ButtonClickRegister"/>
+            <Button Height="30" Width="70" Content="Cancel"  Background="#FFDF9EFF" Click="ButtonClickCancel"/>
+        </StackPanel>
+        
+    </DockPanel>
 
 </Window>

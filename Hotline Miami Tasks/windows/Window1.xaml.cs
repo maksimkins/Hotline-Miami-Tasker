@@ -12,16 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Hotline_Miami_Tasks
+namespace Hotline_Miami_Tasks;
+
+/// <summary>
+/// Interaction logic for Window1.xaml
+/// </summary>
+public partial class Window1 : Window
 {
-    /// <summary>
-    /// Interaction logic for Window1.xaml
-    /// </summary>
-    public partial class Window1 : Window
+    public Window1()
     {
-        public Window1()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+
+        this.DataContext = this;
     }
 }
