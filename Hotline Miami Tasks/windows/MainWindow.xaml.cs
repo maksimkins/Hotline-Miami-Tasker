@@ -107,16 +107,19 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
     private void ButtonClickLogin(object sender, RoutedEventArgs e)
     {
-        if(users is null || !users.Any(user => (user.Password == UserPassword && user.Login == UserLogin) ))
+        if(users is null || !users.Any(user => (user.Password == UserPassword && user.Login == UserLogin)))
         {
             this.Message = "there are no such user";
             return;
         }
 
         MessageBox.Show("logined!!");
+        User user =  users.First((user => (user.Password == UserPassword && user.Login == UserLogin)));
+        Window1 window = new Window1(this, user);
 
-        //открывается второе окно и игра начинается
+        window.Show();
 
+        this.Hide();
     }
 
     private void ButtonClickRegister(object sender, RoutedEventArgs e)
@@ -136,7 +139,9 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             
             MessageBox.Show("registered!!");
 
-            //открывается второе окно и игра начинается
+            Window1 window = new Window1(this, newUser);
+            window.Show();
+            this.Hide();           
         }
         catch (Exception ex)
         {

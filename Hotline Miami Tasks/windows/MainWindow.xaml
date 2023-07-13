@@ -9,11 +9,23 @@
     <DockPanel Background="#FFEAB4E0">
         
         <StackPanel DockPanel.Dock="Top">
-            <Label Content="login                                    (digits and letters)" FontSize="20" FontFamily="Agency FB" Height="40"/>
-            <TextBox Height="40" Text="{Binding UserLogin}" FontSize="20" Background="#FFEAB4E0"/>
-            <Label Content="password                   (digits, letters, ($ % *) )" FontSize="20" FontFamily="Agency FB" Height="40"/>
-            <TextBox Height="40" Text="{Binding UserPassword}" FontSize="20" Background="#FFEAB4E0"/>
-            <Label Content="{Binding Message}" FontSize="20" FontFamily="Agency FB" Height="40"/>
+           
+            <Label Content="login (digits and letters)" FontSize="20" FontFamily="Agency FB" Height="40"/>
+            
+            <TextBox Height="40" 
+                     Text="{Binding UserLogin}" 
+                     FontSize="20" Background="#FFEAB4E0"/>
+            
+            <Label Content="password (digits, letters, ($ % *) )"
+                   FontSize="20" FontFamily="Agency FB" Height="40"/>
+            
+            <TextBox Height="40" 
+                     Text="{Binding UserPassword}"
+                     FontSize="20" Background="#FFEAB4E0"/>
+            
+            <Label Content="{Binding Message}" FontSize="20"
+                   FontFamily="Agency FB" Height="40"/>
+        
         </StackPanel>
 
         <StackPanel DockPanel.Dock ="Bottom"  Orientation="Horizontal">

@@ -1,24 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Hotline_Miami_Tasks.Models;
 
-class User
+public class User
 {
+    const string tasksPath = "assets/Tasks.json";
+
     public string? Login { get; set; }
     public string? Password { get; set; }
+    public List<Task>? TasksThoseLeftToDo { get; set; }
 
     private User(string? login, string? password)
     {
         Login = login;
         Password = password;
+        this.DownloadTasks();
     }
 
     public User() { }
+
+    private void DownloadTasks()
+    {
+        string allTasks = File.ReadAllText(tasksPath);
+        TasksThoseLeftToDo = JsonSerializer.Deserialize<List<Task>>(allTasks);
+    }
 
     private static bool IsLoginGood(string? login)
     {
