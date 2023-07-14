@@ -99,7 +99,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         base.OnClosing(e);
     }
 
-    private void SaveUsers()
+    public void SaveUsers()
     {
         string usersStr = JsonSerializer.Serialize(users);
         File.WriteAllText(usersPath, usersStr);
@@ -118,6 +118,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         Window1 window = new Window1(this, user);
 
         window.Show();
+        window.choseTask();
 
         this.Hide();
     }
@@ -141,6 +142,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
             Window1 window = new Window1(this, newUser);
             window.Show();
+            window.choseTask();
             this.Hide();           
         }
         catch (Exception ex)

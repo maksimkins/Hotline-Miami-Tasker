@@ -8,9 +8,9 @@ namespace Hotline_Miami_Tasks.Models;
 
 public enum lvlEnum
 {
-	f1v1 = 1,
-	s1v1 = 2,
-	t1v1 = 3,
+	flvl = 1,
+    slvl = 2,
+    tlvl = 3,
 }
 
 public class Task

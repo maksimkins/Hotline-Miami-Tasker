@@ -12,20 +12,23 @@
                Height="107" Margin="0,59,0,0" VerticalAlignment="Top" 
                Width="620" FontSize="18" RenderTransformOrigin="0.5,0.5"/>
         
-        <Button Content="1 lvl" HorizontalAlignment="Left" 
+        <Button Content="flvl" HorizontalAlignment="Left" 
                 Height="54" Margin="90,325,0,0" VerticalAlignment="Top" 
                 Width="129"
-                Background="#FFEAB4E0"/>
+                Background="#FFEAB4E0"
+                Click="ButtonClick"/>
         
-        <Button Content="2 lvl" HorizontalAlignment="Center" 
+        <Button Content="slvl" HorizontalAlignment="Center" 
                 Height="54" Margin="0,325,0,0" VerticalAlignment="Top"
                 Width="128"
-                Background="#FFEAB4E0"/>
+                Background="#FFEAB4E0"
+                Click="ButtonClick"/>
         
-        <Button Content="3 lvl" HorizontalAlignment="Left" 
+        <Button Content="tlvl" HorizontalAlignment="Left" 
                 Height="54" Margin="581,325,0,0" VerticalAlignment="Top" 
                 Width="129"
-                Background="#FFEAB4E0"/>
+                Background="#FFEAB4E0"
+                Click="ButtonClick"/>
 
 
 
