@@ -79,13 +79,11 @@ public class User
             if (!specialSymbols.Contains(s))
                 throw new ArgumentException("contains smth different");
         }
-
         return true;
     }
 
     public static User CreateUser(string? login, string? password)
     {
-
         var isLoginGood = User.IsLoginGood(login);
         var isPasswordGood = User.IsPasswordGood(password);
 

@@ -126,8 +126,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     private void ButtonClickRegister(object sender, RoutedEventArgs e)
     {
         try
-        {
-            
+        {            
             if (this.IsUserAlreadyRegistered(UserLogin))
                 throw new ArgumentException("user already registered");
 

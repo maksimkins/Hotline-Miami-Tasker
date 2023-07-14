@@ -19,9 +19,6 @@ using Hotline_Miami_Tasks.Models;
 
 namespace Hotline_Miami_Tasks;
 
-/// <summary>
-/// Interaction logic for Window1.xaml
-/// </summary>
 public partial class Window1 : Window, INotifyPropertyChanged
 {
     MainWindow? mw;
@@ -88,11 +85,9 @@ public partial class Window1 : Window, INotifyPropertyChanged
     {
         if(sender is Button button)
         {
-
-
             lvlEnum? lvl = null; 
 
-            //if (button.Content != CurentTask.Lvl) //i don't know why it doesn't work this way.i have a thought that the problem is in encoding
+            //if (button.Content != CurentTask.Lvl) //i don't know why it doesn't work this way. i have a thought that the problem is in encoding
             //    return;
 
             switch (button.Content)

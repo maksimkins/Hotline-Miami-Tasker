@@ -16,7 +16,6 @@ public enum lvlEnum
 public class Task
 {
 	public string? TaskDescription { set; get; }
-
     public lvlEnum Lvl { set; get; }
 
 	public Task() { }
